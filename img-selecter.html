@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gola{
+            display: block;
+            height: 140px;
+            width: 140px;
+            background: linear-gradient(rgb(143, 143, 5),red, rgb(104, 6, 22),rgb(253, 3, 53),rgb(5, 248, 5));
+            border-radius: 50%;
+            padding: 2px;
+
+        }
+        .gola img{
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+
+            
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="gola">
+    <img src="img.png" alt="">
+        </div>
+    <input type="file" id="file" name="file">
+</div>
+    <script>
+        const image = document.querySelector("img"),
+        input = document.querySelector("input");
+
+        input = addEventListener("change",() =>{
+            image.src = URL.createObjectURL(input.files[0]);
+        });
+
+    </script>
+</body>
+</html>
