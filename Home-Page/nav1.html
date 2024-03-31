@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="nav1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body style="background: linear-gradient(rgba(0, 0, 255, 0.505), rgba(109, 109, 7, 0.659), crimson, rgba(165, 42, 42, 0.155), rgba(13, 143, 57, 0.588) );">
+    <header>
+        <a href="" class="logo">rehman babar</a>
+        <ul class="navlist">
+            <li><a href="">home</a></li>
+            <li><a href="">company</a></li>
+            <li><a href="">about us</a></li>
+            <li><a href="">blog</a></li>
+            <li><a href="">help</a></li>
+            <li><a href="">contaet uc</a></li>
+        </ul>
+        <img class="menu" id="menu1" src="./menu-btn.png" alt="">
+    </header>
+    <section class="hero">
+        <div class="container-fluid">
+        <div class="row">
+            
+                <div class="col-6 content">
+                    <h5># Tranding No.1</h5>
+                    <h4>Multi_Tallented</h4>
+                    <h1>goblins</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis commodi doloremque ipsa officia in quis maiores esse deleniti laborum ab.</p>
+                    <a href="" class="ctn">Learn More</a>
+                    <a href="" class="ctn"><i class="fa-brands fa-facebook"></i> Watch Gameplay</a>
+                    </div>
+                    <div class="col-6 img"><img src="./hero-img.svg" alt=""></div>
+                </div>
+            </div>
+
+
+    </section>
+
+    <script>
+        let menu = document.querySelector('#menu1');
+        let navlist = document.querySelector('.navlist');
+
+        menu.onclick = () =>{
+            menu.classList.toggle('menu')
+
+            navlist.classList.toggle('open')
+        }
+    </script>
+</body>
+</html>
