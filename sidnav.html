@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>side nav</title>
+    <style>
+        #sidebar{
+            position: fixed;
+            left: -300px;
+            top: 0%;
+            width: 300px;
+            height: 100%;
+            background-color: black;
+            transition: left 500ms linear;
+        }
+        #sidebar.active {
+            left: 0%;
+        }
+        .link a{
+            text-decoration: none;
+            display: block;
+            padding: 11px;
+            text-transform: uppercase;
+            color: #eee;
+            border-bottom: 1px solid #555;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #sidebar #sidebar-toggle-btn{
+            position: absolute;
+            width: 38px;
+            height: 38px;
+            cursor: pointer;
+            top: 10px;
+            right: -55px;
+        }
+        #sidebar-toggle-btn span{
+            width: 100%;
+            height: 5px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: #111;
+            
+        }
+        #sidebar-toggle-btn span:nth-child(1) {
+            top: 10%;
+        } 
+        #sidebar-toggle-btn span:nth-child(3) {
+            top: 90%;
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <div id="sidebar-toggle-btn">
+        <span></span><span></span><span></span></div>
+    
+    <div class="link">
+        <a href="#">raja</a>
+        <a href="#">raja</a>
+        <a href="#">raja</a>
+        <a href="#">raja</a>
+        <a href="#">raja</a>
+    </div>
+</div>
+<script>
+    document.getElementById("sidebar-toggle-btn").addEventListener("click",function(){
+        document.getElementById("sidebar").classList.toggle("active");
+    });
+</script>
+</body>
+</html>
